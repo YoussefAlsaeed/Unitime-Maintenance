@@ -1,6 +1,11 @@
 https://app.clickup.com/9009134684/v/s/90090283206
 
-** NOTE ** 
--Can't be accessed without permission , send an email at "yousefalsaeed2002@gmail.com" for reviewing.
+https://workspacemaintenance.atlassian.net/jira/servicedesk/projects/MA/section/changes/custom/29
 
-- Will also provide screenshots of the ticketing system.
+
+** NOTE ** 
+- Can't be accessed without permission , send an email at "yousefalsaeed2002@gmail.com" for reviewing.
+
+- 2 versions are used JIRA and ClickUp , whichever one is better can be progress into phase 2.
+
+
