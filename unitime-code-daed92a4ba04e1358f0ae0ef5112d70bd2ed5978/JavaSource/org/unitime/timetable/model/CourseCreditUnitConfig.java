@@ -139,4 +139,11 @@ public abstract class CourseCreditUnitConfig extends BaseCourseCreditUnitConfig 
 	public String toString(){
 		return(creditText());
 	}
+	public static float calculateTotalCredits(List<CourseCreditUnitConfig> creditConfigs) {
+	    float totalCredits = 0.0f;
+	    for (CourseCreditUnitConfig creditConfig : creditConfigs) {
+	        totalCredits += creditConfig.getMaxCredit();
+	    }
+	    return totalCredits;
+	}
 }
