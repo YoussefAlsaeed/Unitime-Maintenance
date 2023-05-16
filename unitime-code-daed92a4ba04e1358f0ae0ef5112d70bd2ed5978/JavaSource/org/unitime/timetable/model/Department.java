@@ -197,13 +197,16 @@ public class Department extends BaseDepartment implements Comparable<Department>
 	}
 	
 	private static int distance(String color1, String color2) {
-		if (color1.equals(color2)) return 0;
-		Color c1 = hex2color(color1);
-		Color c2 = hex2color(color2);
-		return (int)Math.sqrt(
-			((c1.getRed()-c2.getRed())*(c1.getRed()-c2.getRed())) +
-			((c1.getGreen()-c2.getGreen())*(c1.getGreen()-c2.getGreen())) +
-			((c1.getBlue()-c2.getBlue())*(c1.getBlue()-c2.getBlue())));
+	    if (color1.equals(color2)) return 0;
+	    Color c1 = hex2color(color1);
+	    Color c2 = hex2color(color2);
+	    if (c1 == null || c2 == null) {
+	        throw new IllegalArgumentException("Invalid color string");
+	    }
+	    return (int)Math.sqrt(
+	        ((c1.getRed()-c2.getRed())*(c1.getRed()-c2.getRed())) +
+	        ((c1.getGreen()-c2.getGreen())*(c1.getGreen()-c2.getGreen())) +
+	        ((c1.getBlue()-c2.getBlue())*(c1.getBlue()-c2.getBlue())));
 	}
 	
 	@SuppressWarnings("unchecked")
