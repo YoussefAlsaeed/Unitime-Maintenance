@@ -83,10 +83,15 @@ public class CourseEvent extends BaseCourseEvent {
 	}
 	
 	public Session getSession() {
-		if (getRelatedCourses() == null) return null;
-		for (RelatedCourseInfo rc: getRelatedCourses())
-			return rc.getCourse().getInstructionalOffering().getSession();
-		return null;
-	}
-
+	    if (getRelatedCourses() == null) return null;
+	    Session session = null;
+	    for (RelatedCourseInfo rc: getRelatedCourses()) {
+	        Session s = rc.getCourse().getInstructionalOffering().getSession();
+	        if (s != null) {
+	            session = s;
+	            break;
+	        }
+	    }
+	    return session;
+	} //the return statment is conditional
 }

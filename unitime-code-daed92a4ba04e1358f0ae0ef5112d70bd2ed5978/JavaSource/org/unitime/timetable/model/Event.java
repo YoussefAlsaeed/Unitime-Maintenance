@@ -138,12 +138,14 @@ public abstract class Event extends BaseEvent implements Comparable<Event> {
 		}
 		return(s);
 	}
-	public int compareTo (Event e) {
-		if (getEventName()!=e.getEventName()) {
-			return getEventName().compareTo(e.getEventName());
-		} else return (getUniqueId() == null ? Long.valueOf(-1) : getUniqueId()).compareTo(e.getUniqueId() == null ? -1 : e.getUniqueId());
+	public int compareTo(Event e) {
+	    if (!getEventName().equals(e.getEventName())) {
+	        return getEventName().compareTo(e.getEventName());
+	    } else {
+	        return (getUniqueId() == null ? Long.valueOf(-1) : getUniqueId())
+	            .compareTo(e.getUniqueId() == null ? -1 : e.getUniqueId());
+	    }
 	}
-
 	public static List findAll() {
 	    return new EventDAO().getSession().createQuery(
 	            "select e from Event e"

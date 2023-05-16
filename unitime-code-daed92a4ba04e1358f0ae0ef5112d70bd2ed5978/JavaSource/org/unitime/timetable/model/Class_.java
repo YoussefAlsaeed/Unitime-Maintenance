@@ -1858,11 +1858,18 @@ public class Class_ extends BaseClass_ {
 	public float effectiveTeachingLoad() {
 		int instructors = 0;
 		float totalLoad = 0f;
-		for (TeachingClassRequest tcr: getTeachingRequests())
-			if (tcr.isAssignInstructor()) {
-				instructors += tcr.getTeachingRequest().getNbrInstructors();
-				totalLoad += tcr.getTeachingRequest().getNbrInstructors() * tcr.getTeachingRequest().getTeachingLoad();
-			}
+		for (TeachingClassRequest tcr: getTeachingRequests()) {
+		    if (tcr.isAssignInstructor()) {
+		        instructors += tcr.getTeachingRequest().getNbrInstructors();
+		        totalLoad += tcr.getTeachingRequest().getNbrInstructors() * tcr.getTeachingRequest().getTeachingLoad();
+		    }
+		}
+
+		if (instructors == 0) {
+		    System.out.println("Unexpected state: None of the teaching requests have any instructors assigned. Please check the input data.");
+		    return 0f;
+		}
+
 		return totalLoad / instructors;
 	}
 	
