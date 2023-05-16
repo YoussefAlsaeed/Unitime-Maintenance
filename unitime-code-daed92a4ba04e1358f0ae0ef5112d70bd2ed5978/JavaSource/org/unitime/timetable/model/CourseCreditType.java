@@ -71,6 +71,7 @@ public class CourseCreditType extends BaseCourseCreditType {
 		return getAbbreviation();
 	}	
 
+
 	public static List<CourseCreditType> getCreditTypesForDepartment(Department department) {
 		List<CourseCreditType> creditTypes = new ArrayList<>();
 		for (CourseCreditType creditType : getAllCourseCreditTypes()) {
