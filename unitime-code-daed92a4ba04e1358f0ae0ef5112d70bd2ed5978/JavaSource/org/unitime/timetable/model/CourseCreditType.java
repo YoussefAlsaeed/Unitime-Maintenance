@@ -70,4 +70,15 @@ public class CourseCreditType extends BaseCourseCreditType {
 		if (getAbbreviation()==null) return "";
 		return getAbbreviation();
 	}	
+
+	public static List<CourseCreditType> getCreditTypesForDepartment(Department department) {
+		List<CourseCreditType> creditTypes = new ArrayList<>();
+		for (CourseCreditType creditType : getAllCourseCreditTypes()) {
+			if (creditType.getDepartment() != null && creditType.getDepartment().equals(department)) {
+				creditTypes.add(creditType);
+			}
+		}
+		return creditTypes;
+	}
+	
 }
