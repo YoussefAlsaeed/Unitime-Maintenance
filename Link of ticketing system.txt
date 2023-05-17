@@ -1,11 +1,7 @@
-https://app.clickup.com/9009134684/v/s/90090283206
-
-https://workspacemaintenance.atlassian.net/jira/servicedesk/projects/MA/section/changes/custom/29
+https://app.clickup.com/9009134684/v/b/li/900901442779
 
 
 ** NOTE ** 
 - Can't be accessed without permission , send an email at "yousefalsaeed2002@gmail.com" for reviewing.
-
-- 2 versions are used JIRA and ClickUp , whichever one is better can be progress into phase 2.
 
 
